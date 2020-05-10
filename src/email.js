@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var nodemailer = require('nodemailer');
+var nodemailer = require('./node_modules/nodemailer');
 var mailOptions;
 
 var username;
@@ -18,7 +18,7 @@ var transporter = nodemailer.createTransport({
 exports.setCredentials = function (user, passwd)
 {
    username = user;
-   pass = passwd;
+   password = passwd;
 }
 
 exports.setOptions = function (fromaddr, toaddr, subject, msg){
