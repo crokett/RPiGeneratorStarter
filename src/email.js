@@ -3,9 +3,6 @@
 var nodemailer = require('nodemailer');
 var mailOptions;
 
-const SEND = "crokett@gmail.com";
-const RECEIVE = "crokett@gmail.com";
-
 var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
