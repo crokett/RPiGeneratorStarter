@@ -3,13 +3,23 @@
 var nodemailer = require('nodemailer');
 var mailOptions;
 
+var username;
+var password;
+
 var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'username'
-    pass: 'passsword'
+    user: username,
+    pass: password
   }
 });
+
+
+exports.setCredentials = function (user, passwd)
+{
+   username = user;
+   pass = passwd;
+}
 
 exports.setOptions = function (fromaddr, toaddr, subject, msg){
  mailOptions = {
